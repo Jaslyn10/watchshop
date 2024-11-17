@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watches</title>
+</head>
+<body>
+    <h1>Our Collection</h1>
+    <ul>
+        {% for watch in watches %}
+        <li>
+            <img src="{{ watch.image.url }}" alt="{{ watch.name }}" width="200">
+            <h2>{{ watch.name }}</h2>
+            <p>{{ watch.description }}</p>
+            <p>${{ watch.price }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

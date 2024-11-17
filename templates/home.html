@@ -1,0 +1,32 @@
+{% extends "main.html" %}  <!-- Inherit the structure from main.html -->
+{% load static %}
+{% block image_block %}
+<p>Welcome to Watchshop Home Page</p>  <!-- Content for image block -->
+{% endblock %}
+
+{% block desc_block %}
+    <div class="container mt-5">
+        <div class="row">
+            {% for watch in watches %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ watch.image.url }}" class="card-img-top" alt="Watch Image" height="200" width="200">
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ watch.name }}</h5>
+                        <p class="card-text">{{ watch.description }}</p>
+                        <p class="card-text"><strong>Price:</strong> Rs.{{ watch.price }}</p>
+                        <a href="{% url 'add_to_wishlist' watch.id %}" class="btn btn-primary">Add to Wishlist</a>
+                        <a href="{% url 'add_to_cart' watch.id %}" class="btn btn-success">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block price_block %}
+<p>Check out our pricing for each watch!</p>  <!-- Content for pricing block -->
+{% endblock %}

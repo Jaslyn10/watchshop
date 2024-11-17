@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+
+{% block desc_block %}
+<h2>My Wishlist</h2>
+{% if wishlist.watches.count == 0 %}
+    <p>No items added to Wishlist.</p>
+{% else %}
+    <div class="container mt-5">
+        <div class="row">
+            {% for watch in wishlist.watches.all %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ watch.image.url }}" class="card-img-top" alt="Watch Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ watch.name }}</h5>
+                        <p class="card-text">{{ watch.description }}</p>
+                        <p class="card-text"><strong>Price:</strong> ${{ watch.price }}</p>
+                        <form method="POST" action="{% url 'remove_from_wishlist' watch.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Remove from Wishlist</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+{% endblock %}
