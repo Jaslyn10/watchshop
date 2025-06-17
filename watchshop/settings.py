@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage.apps.HomepageConfig',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/login/'  # URL for the login page
 LOGIN_REDIRECT_URL = '/'  # Where to redirect users after successful login
 LOGOUT_REDIRECT_URL = '/' 
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': '	Root',
+    'API_KEY': '529174225653499',
+    'API_SECRET': 'MxR_KUJALLOVF9951ikiB98TGFE',
+}
