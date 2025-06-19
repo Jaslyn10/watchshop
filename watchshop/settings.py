@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ["watchshop-p34z.onrender.com"]
+ALLOWED_HOSTS = ["watchshop-p34z.onrender.com","watchshop-main-d71aa7a.kuberns.cloud"]
 
 
 
