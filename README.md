@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 About the Project
+## About the Project
 
 This is a **Django-based web application** created to showcase my skills in backend development, database modeling, and deployment of dynamic websites using the Django framework.
 
@@ -15,21 +15,21 @@ It simulates a **watch listing and shopping platform** where users can view watc
         If the app has been inactive for a while, it might take 30–60 seconds to load initially as the server spins back up. Please be patient — the site will load shortly!
 ---
 
-## 🚀 Features
+## Features
 
-- 🏠 **Home Page**: Displays all watches available on the platform.
-- 🔒 **User Authentication**: 
+- **Home Page**: Displays all watches available on the platform.
+- **User Authentication**: 
   - Register / Login to access features like **Add to Wishlist** or **Add to Cart**.
-- 🛒 **Cart and Wishlist**: 
+- **Cart and Wishlist**: 
   - Logged-in users can add/remove watches to/from their cart and wishlist.
-- 📤 **Upload Watch**: 
+- **Upload Watch**: 
   - Visitors can upload a watch image and details even without logging in.
-- 🖼️ **Image Handling**: 
+- **Image Handling**: 
   - Media uploads handled via Django’s media configuration (Cloudinary optional for production).
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Django 5.x
 - SQLite (for local development)
@@ -38,7 +38,7 @@ It simulates a **watch listing and shopping platform** where users can view watc
 
 ---
 
-## ⚙️ Run Locally
+## Run Locally
 
 To clone and run this project on your local machine:
 
